@@ -1,0 +1,5 @@
+Title,Surname,FirstName,MiddleName,Email,Faculty,Department,Rank,EmploymentStatus
+Prof,Adeyemi,Oluwaseun,Babatunde,o.adeyemi@unilag.edu.ng,Faculty of Science,Computer Science,Professor,Full Time
+Dr,Okonkwo,Chioma,Ngozi,invalid-email,Faculty of Engineering,Electrical Engineering,Senior Lecturer,Full Time
+,Ibrahim,Yusuf,Mohammed,y.ibrahim@unilag.edu.ng,Faculty of Arts,History,Associate Professor,Full Time
+Dr,Adeleke,Folake,,f.adeleke@unilag.edu.ng,Faculty of Science,Chemistry,Unknown Rank,Full Time

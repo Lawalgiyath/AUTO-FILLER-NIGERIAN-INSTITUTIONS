@@ -1,0 +1,50 @@
+{
+  "formUrl": "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform",
+  "fieldMappings": {
+    "title": {
+      "selector": "div[data-params*='Title'] div[role='listbox']",
+      "type": "dropdown",
+      "required": true
+    },
+    "surname": {
+      "selector": "input[aria-label*='Surname' i]",
+      "type": "text",
+      "required": true
+    },
+    "firstName": {
+      "selector": "input[aria-label*='First Name' i]",
+      "type": "text",
+      "required": true
+    },
+    "middleName": {
+      "selector": "input[aria-label*='Middle Name' i]",
+      "type": "text",
+      "required": false
+    },
+    "email": {
+      "selector": "input[type='email']",
+      "type": "email",
+      "required": true
+    },
+    "faculty": {
+      "selector": "div[data-params*='Faculty'] div[role='listbox']",
+      "type": "dropdown",
+      "required": true
+    },
+    "department": {
+      "selector": "input[aria-label*='Department' i]",
+      "type": "text",
+      "required": true
+    },
+    "rank": {
+      "selector": "div[data-params*='Rank'] div[role='listbox']",
+      "type": "dropdown",
+      "required": true
+    },
+    "employmentStatus": {
+      "selector": "div[data-params*='Employment'] div[role='listbox']",
+      "type": "dropdown",
+      "required": true
+    }
+  }
+}

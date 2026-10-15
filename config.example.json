@@ -1,0 +1,81 @@
+{
+  "formUrl": "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform",
+  "fieldMappings": {
+    "title": {
+      "selector": "div[data-params*='Title'] div[role='listbox'], div[aria-label*='Title'] div[role='listbox']",
+      "type": "dropdown",
+      "required": true,
+      "description": "Title dropdown (Prof, Assoc. Prof, Dr, Mr, Mrs, Ms)"
+    },
+    "surname": {
+      "selector": "input[aria-label*='Surname' i], input[aria-label*='Last Name' i]",
+      "type": "text",
+      "required": true,
+      "description": "Last name / Surname text field"
+    },
+    "firstName": {
+      "selector": "input[aria-label*='First Name' i]",
+      "type": "text",
+      "required": true,
+      "description": "First name text field"
+    },
+    "middleName": {
+      "selector": "input[aria-label*='Middle Name' i]",
+      "type": "text",
+      "required": false,
+      "description": "Middle name text field (optional)"
+    },
+    "email": {
+      "selector": "input[type='email'], input[aria-label*='Email' i]",
+      "type": "email",
+      "required": true,
+      "description": "Email address field"
+    },
+    "faculty": {
+      "selector": "div[data-params*='Faculty'] div[role='listbox'], div[aria-label*='Faculty'] div[role='listbox']",
+      "type": "dropdown",
+      "required": true,
+      "description": "Faculty dropdown"
+    },
+    "department": {
+      "selector": "input[aria-label*='Department' i], input[aria-label*='Dept' i]",
+      "type": "text",
+      "required": true,
+      "description": "Department text field or dropdown"
+    },
+    "rank": {
+      "selector": "div[data-params*='Rank'] div[role='listbox'], div[aria-label*='Rank'] div[role='listbox']",
+      "type": "dropdown",
+      "required": true,
+      "description": "Academic rank dropdown"
+    },
+    "employmentStatus": {
+      "selector": "div[data-params*='Employment'] div[role='listbox'], div[aria-label*='Employment Status'] div[role='listbox']",
+      "type": "dropdown",
+      "required": true,
+      "description": "Employment status dropdown"
+    }
+  },
+  "notes": [
+    "IMPORTANT: This is an example configuration file.",
+    "You must customize the selectors to match your specific Google Form.",
+    "",
+    "How to find selectors:",
+    "1. Open your Google Form in a browser",
+    "2. Right-click on a field and select 'Inspect' or 'Inspect Element'",
+    "3. Find the appropriate selector (input, div, etc.) for that field",
+    "4. Look for unique attributes like aria-label, data-params, or role",
+    "5. Update the selector in this config file",
+    "",
+    "Tips:",
+    "- Text fields typically use: input[aria-label*='Field Name']",
+    "- Dropdowns typically use: div[role='listbox'] or div[data-params*='Field Name']",
+    "- Email fields use: input[type='email']",
+    "- The 'i' flag in selectors makes them case-insensitive",
+    "",
+    "Testing:",
+    "- Use the 'validate' command first to check your data",
+    "- Test with --no-headless flag to see the browser in action",
+    "- Start with a small data file to test the configuration"
+  ]
+}

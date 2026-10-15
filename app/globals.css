@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --unilag-maroon: #800000;
+  --unilag-gold: #FFD700;
+  --unilag-dark: #4A0000;
+  --unilag-light: #FFF5E6;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #FFF5E6 0%, #FFFFFF 100%);
+  min-height: 100vh;
+}
+
+.unilag-gradient {
+  background: linear-gradient(135deg, var(--unilag-maroon) 0%, var(--unilag-dark) 100%);
+}
+
+.btn-unilag {
+  background: var(--unilag-maroon);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-unilag:hover {
+  background: var(--unilag-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(128, 0, 0, 0.3);
+}
+
+.btn-unilag:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.card-unilag {
+  background: white;
+  border: 2px solid var(--unilag-maroon);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-unilag:hover {
+  box-shadow: 0 8px 16px rgba(128, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.checkbox-unilag {
+  accent-color: var(--unilag-maroon);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--unilag-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--unilag-maroon);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--unilag-dark);
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
