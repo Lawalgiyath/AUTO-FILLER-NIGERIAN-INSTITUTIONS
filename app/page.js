@@ -87,7 +87,11 @@ export default function Home() {
                       ? 'bg-unilag-maroon text-white' 
                       : 'bg-gray-300 text-gray-600'
                   }`}>
-                    {currentStep > step.num ? '✓' : step.num}
+                    {currentStep > step.num ? (
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                      </svg>
+                    ) : step.num}
                   </div>
                   <p className="text-xs mt-1 font-semibold">{step.label}</p>
                 </div>
@@ -161,7 +165,7 @@ export default function Home() {
             University of Lagos Staff Form AutoFiller
           </p>
           <p className="text-sm opacity-90">
-            Built with ❤️ for UNILAG | © 2026
+            Built for UNILAG — © 2026
           </p>
         </div>
       </footer>

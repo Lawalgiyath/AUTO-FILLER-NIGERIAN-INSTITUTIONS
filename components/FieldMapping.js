@@ -62,8 +62,7 @@ export default function FieldMapping({ detectedFields, onMappingComplete, onBack
     <div className="fade-in">
       <div className="card-unilag p-8">
         <h3 className="text-2xl font-bold text-unilag-maroon mb-6 flex items-center justify-between">
-          <span className="flex items-center">
-            <span className="text-3xl mr-3">🗺️</span>
+          <span>
             Step 2: Map Your Data Fields
           </span>
           <button
@@ -76,7 +75,7 @@ export default function FieldMapping({ detectedFields, onMappingComplete, onBack
 
         <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-6">
           <p className="text-blue-800 font-semibold mb-2">
-            📌 What is Field Mapping?
+            What is Field Mapping?
           </p>
           <p className="text-blue-700 text-sm">
             We detected {detectedFields.length} fields in your Google Form. 
@@ -88,9 +87,8 @@ export default function FieldMapping({ detectedFields, onMappingComplete, onBack
         <div className="mb-6">
           <button
             onClick={handleAutoMap}
-            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 shadow-lg flex items-center"
+            className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 shadow-lg"
           >
-            <span className="text-xl mr-2">⚡</span>
             Auto-Map Fields (Smart Match)
           </button>
           <p className="text-sm text-gray-600 mt-2">
@@ -105,7 +103,7 @@ export default function FieldMapping({ detectedFields, onMappingComplete, onBack
               Mapping Progress: {getMappedCount()} / {detectedFields.length}
             </span>
             <span className="text-sm text-gray-600">
-              {getMappedCount() === detectedFields.length ? '✅ All fields mapped!' : '⏳ In progress...'}
+              {getMappedCount() === detectedFields.length ? 'All fields mapped!' : 'In progress...'}
             </span>
           </div>
           <div className="w-full bg-gray-300 rounded-full h-3">
@@ -144,7 +142,7 @@ export default function FieldMapping({ detectedFields, onMappingComplete, onBack
                   </td>
                   <td className="px-4 py-4">
                     {field.required ? (
-                      <span className="text-red-600 font-semibold">✓ Yes</span>
+                      <span className="text-red-600 font-semibold">Required</span>
                     ) : (
                       <span className="text-gray-500">Optional</span>
                     )}
@@ -163,9 +161,9 @@ export default function FieldMapping({ detectedFields, onMappingComplete, onBack
                   </td>
                   <td className="px-4 py-4 text-center">
                     {isMapped(field.id) ? (
-                      <span className="text-2xl">✅</span>
+                      <span className="text-green-600 font-bold">✓</span>
                     ) : (
-                      <span className="text-2xl">⏳</span>
+                      <span className="text-gray-400">—</span>
                     )}
                   </td>
                 </tr>

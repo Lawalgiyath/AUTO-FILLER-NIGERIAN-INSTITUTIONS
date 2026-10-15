@@ -46,8 +46,7 @@ export default function FormUrlInput({ onFormAnalyzed }) {
     <div className="fade-in">
       {/* Welcome Card */}
       <div className="card-unilag p-8 mb-8">
-        <h2 className="text-3xl font-bold text-unilag-maroon mb-4 flex items-center">
-          <span className="text-4xl mr-3">🎓</span>
+        <h2 className="text-3xl font-bold text-unilag-maroon mb-4">
           Welcome to UNILAG Staff Form AutoFiller
         </h2>
         <p className="text-gray-700 text-lg leading-relaxed">
@@ -59,8 +58,7 @@ export default function FormUrlInput({ onFormAnalyzed }) {
 
       {/* How It Works */}
       <div className="card-unilag p-6 mb-8">
-        <h3 className="text-xl font-bold text-unilag-maroon mb-4 flex items-center">
-          <span className="text-2xl mr-2">📋</span>
+        <h3 className="text-xl font-bold text-unilag-maroon mb-4">
           How It Works
         </h3>
         <div className="grid md:grid-cols-5 gap-4">
@@ -99,8 +97,7 @@ export default function FormUrlInput({ onFormAnalyzed }) {
 
       {/* Main Form URL Input */}
       <div className="card-unilag p-8">
-        <h3 className="text-2xl font-bold text-unilag-maroon mb-6 flex items-center">
-          <span className="text-3xl mr-3">🔗</span>
+        <h3 className="text-2xl font-bold text-unilag-maroon mb-6">
           Step 1: Enter Your Google Form URL
         </h3>
 
@@ -121,21 +118,20 @@ export default function FormUrlInput({ onFormAnalyzed }) {
               disabled={isAnalyzing}
             />
             <p className="text-sm text-gray-500 mt-2">
-              📌 Paste the full URL of your Google Form here
+              Note: Paste the full URL of your Google Form here
             </p>
           </div>
 
           {error && (
             <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
-              <p className="text-red-700 font-semibold flex items-center">
-                <span className="text-xl mr-2">⚠️</span>
-                {error}
+              <p className="text-red-700 font-semibold">
+                Warning: {error}
               </p>
             </div>
           )}
 
           <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-            <p className="text-blue-800 font-semibold mb-2">💡 How to get your Form URL:</p>
+            <p className="text-blue-800 font-semibold mb-2">How to get your Form URL:</p>
             <ol className="list-decimal list-inside text-blue-700 space-y-1 text-sm">
               <li>Open your Google Form</li>
               <li>Click the "Send" button</li>
@@ -170,10 +166,7 @@ export default function FormUrlInput({ onFormAnalyzed }) {
                 Analyzing Form...
               </>
             ) : (
-              <>
-                <span className="text-2xl mr-2">🔍</span>
-                Analyze Form & Detect Fields
-              </>
+              'Analyze Form & Detect Fields'
             )}
           </button>
         </div>
@@ -181,8 +174,7 @@ export default function FormUrlInput({ onFormAnalyzed }) {
 
       {/* Example Forms Section */}
       <div className="mt-8 card-unilag p-6">
-        <h4 className="font-bold text-unilag-maroon mb-3 flex items-center">
-          <span className="text-xl mr-2">📝</span>
+        <h4 className="font-bold text-unilag-maroon mb-3">
           Need a Test Form?
         </h4>
         <p className="text-gray-600 text-sm mb-3">

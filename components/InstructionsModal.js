@@ -11,7 +11,10 @@ export default function InstructionsModal({ onConfirm, onClose, fieldMapping }) 
         {/* Header */}
         <div className="unilag-gradient text-white p-6 sticky top-0 z-10">
           <h2 className="text-2xl font-bold flex items-center">
-            <span className="text-3xl mr-3">📋</span>
+            <svg className="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+              <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd"/>
+            </svg>
             Data Preparation Instructions
           </h2>
           <p className="mt-2 text-unilag-gold">
@@ -24,8 +27,11 @@ export default function InstructionsModal({ onConfirm, onClose, fieldMapping }) 
           
           {/* Required Fields Section */}
           <section className="border-l-4 border-unilag-maroon pl-4">
-            <h3 className="text-xl font-bold text-unilag-maroon mb-3">
-              📝 Required Fields
+            <h3 className="text-xl font-bold text-unilag-maroon mb-3 flex items-center">
+              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clipRule="evenodd"/>
+              </svg>
+              Required Fields
             </h3>
             <p className="text-gray-700 mb-3">
               Your file must include these columns (column names are case-insensitive):
@@ -52,22 +58,31 @@ export default function InstructionsModal({ onConfirm, onClose, fieldMapping }) 
 
           {/* File Formats Section */}
           <section className="border-l-4 border-unilag-gold pl-4">
-            <h3 className="text-xl font-bold text-unilag-maroon mb-3">
-              📄 Supported File Formats
+            <h3 className="text-xl font-bold text-unilag-maroon mb-3 flex items-center">
+              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" clipRule="evenodd"/>
+              </svg>
+              Supported File Formats
             </h3>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="card-unilag p-4 text-center">
-                <p className="text-3xl mb-2">📊</p>
+                <svg className="w-12 h-12 mx-auto mb-2 text-unilag-maroon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clipRule="evenodd"/>
+                </svg>
                 <p className="font-bold text-unilag-maroon">CSV</p>
                 <p className="text-sm text-gray-600">.csv files</p>
               </div>
               <div className="card-unilag p-4 text-center">
-                <p className="text-3xl mb-2">📈</p>
+                <svg className="w-12 h-12 mx-auto mb-2 text-unilag-maroon" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z"/>
+                </svg>
                 <p className="font-bold text-unilag-maroon">Excel</p>
                 <p className="text-sm text-gray-600">.xlsx, .xls</p>
               </div>
               <div className="card-unilag p-4 text-center">
-                <p className="text-3xl mb-2">📝</p>
+                <svg className="w-12 h-12 mx-auto mb-2 text-unilag-maroon" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd"/>
+                </svg>
                 <p className="font-bold text-unilag-maroon">Word</p>
                 <p className="text-sm text-gray-600">.docx (table format)</p>
               </div>
@@ -76,8 +91,11 @@ export default function InstructionsModal({ onConfirm, onClose, fieldMapping }) 
 
           {/* Valid Values Section */}
           <section className="border-l-4 border-green-500 pl-4">
-            <h3 className="text-xl font-bold text-unilag-maroon mb-3">
-              ✅ Valid Values
+            <h3 className="text-xl font-bold text-unilag-maroon mb-3 flex items-center">
+              <svg className="w-6 h-6 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+              </svg>
+              Valid Values
             </h3>
             <div className="space-y-3">
               <div>
@@ -100,8 +118,11 @@ export default function InstructionsModal({ onConfirm, onClose, fieldMapping }) 
 
           {/* Example Section */}
           <section className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-xl font-bold text-unilag-maroon mb-3">
-              💡 Example CSV Format
+            <h3 className="text-xl font-bold text-unilag-maroon mb-3 flex items-center">
+              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z"/>
+              </svg>
+              Example CSV Format
             </h3>
             <pre className="bg-white p-4 rounded border border-gray-300 overflow-x-auto text-sm">
 {`Title,Surname,FirstName,MiddleName,Email,Faculty,Department,Rank,EmploymentStatus
@@ -112,8 +133,11 @@ Dr,Okonkwo,Chioma,Ngozi,c.okonkwo@unilag.edu.ng,Faculty of Engineering,Electrica
 
           {/* Important Notes */}
           <section className="bg-yellow-50 border-l-4 border-yellow-500 p-4">
-            <h3 className="text-xl font-bold text-yellow-800 mb-3">
-              ⚠️ Important Notes
+            <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center">
+              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
+              </svg>
+              Important Notes
             </h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Column names are case-insensitive</li>
