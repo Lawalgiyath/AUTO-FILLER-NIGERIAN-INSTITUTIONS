@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function InstructionsModal({ onConfirm, onClose }) {
+export default function InstructionsModal({ onConfirm, onClose, fieldMapping }) {
   const [hasChecked, setHasChecked] = useState(false);
 
   return (
